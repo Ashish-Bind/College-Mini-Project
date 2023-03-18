@@ -1,0 +1,151 @@
+:root {
+  /* Fonts Variable */
+  --comfortaa-400: "Comfortaa", cursive;
+  --montserrat-400: "Montserrat", sans-serif;
+  --playfair-400: "Playfair Display", serif;
+  --poppins-400: "Poppins", sans-serif;
+  --raleway-400: "Raleway", sans-serif;
+  --vietnam-400: "Be Vietnam Pro", sans-serif;
+
+  /* Color Variable */
+
+  --cl-gray-300: hsl(0, 0%, 27%);
+  --cl-gray-400: #777;
+  --cl-gray-500: #333;
+  --cl-primary-text-dark: #272727;
+  --cl-primary-text-light: #fff;
+
+  --cl-accent-200: hsl(72, 62%, 77%);
+  /* --cl-accent-500: hsl(268, 29%, 48%); */
+  --cl-accent-500: hsl(72, 62%, 47%);
+  /* --cl-accent-600: hsl(268, 29%, 38%); */
+  --cl-accent-600: hsl(72, 62%, 42%);
+
+  /* Font Sizes  */
+  --fs-logo: 2rem;
+  --fs-primary-400: 1.25rem;
+  --fs-heading-700: 2.3rem;
+  --fs-heading-mobile-700: 2.3rem;
+}
+/* CSS Reset  */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+* {
+  font-family: var(--poppins-400);
+}
+
+body {
+  background-color: var(--cl-gray-300);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-first,
+.btn-second {
+  width: 18%;
+  margin-inline: 1rem;
+  text-decoration: none;
+  font-family: var(--poppins-400);
+  font-weight: 400;
+}
+
+.btn-first {
+  background: transparent;
+  border: 2px solid var(--cl-accent-500);
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .btn-first,
+  .btn-second {
+    width: 50%;
+    font-size: 1.1rem;
+    margin-block: 1rem;
+  }
+}

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway&display=swap");
+
+:root {
+  /* Fonts Variable */
+  --comfortaa-400: "Comfortaa", cursive;
+  --montserrat-400: "Montserrat", sans-serif;
+  --playfair-400: "Playfair Display", serif;
+  --poppins-400: "Poppins", sans-serif;
+  --raleway-400: "Raleway", sans-serif;
+  --vietnam-400: "Be Vietnam Pro", sans-serif;
+
+  /* Color Variable */
+
+  --cl-gray-300: #444;
+  --cl-gray-400: #777;
+  --cl-gray-500: #333;
+  --cl-primary-text-dark: #272727;
+  --cl-primary-text-light: #fff;
+
+  /* --cl-accent-200: hsl(268, 39%, 58%); */
+  --cl-accent-200: hsl(72, 62%, 77%);
+  /* --cl-accent-500: hsl(268, 29%, 48%); */
+  --cl-accent-500: hsl(72, 62%, 47%);
+  /* --cl-accent-600: hsl(268, 29%, 38%); */
+  --cl-accent-600: hsl(72, 62%, 42%);
+
+  /* Font Sizes  */
+  --fs-logo: 2rem;
+  --fs-primary-400: 1.25rem;
+  --fs-heading-700: 2.3rem;
+  --fs-heading-mobile-700: 1.7rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins-400);
+}
+.about {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cl-gray-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .content img {
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+}
+.text {
+  width: 500px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+.content {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.text h1 {
+  color: var(--cl-accent-500);
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.text p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 28px;
+  margin-bottom: 25px;
+  word-spacing: 3px;
+}
+button {
+  background-color: var(--cl-accent-500);
+  color: #fff;
+  border: 2px solid transparent;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+button:hover {
+  background-color: var(--cl-accent-600);
+  color: #fff;
+}
+.img-box {
+  width: 600px;
+  border: 2px solid #fff;
+  padding: 80px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1180px) {
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  * {
+    text-align: center;
+  }
+  .img-box {
+    width: 80%;
+    padding: 15px;
+  }
+  h1 {
+    margin-top: 2rem;
+  }
+  .about .content img {
+    margin-bottom: 35px;
+  }
+  .text h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+}

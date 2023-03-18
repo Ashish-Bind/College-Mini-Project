@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireUp | Online Hiring Platform</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <script defer src="JS/index.js"></script>
+</head>
+
+<%- include('partials/nav') %>
+
+    <div class="section grid">
+        <div class="container">
+            <h1>Hire Professionals at Reasonable price, or Become a part of Us</h1>
+        </div>
+        <div class="btn-box">
+            <a class="btn btn-first" href="/ulogin">Hire Professionals</a>
+            <a class="btn btn-second" href="/elogin">Become part of us</a>
+        </div>
+        <div class="home-link">
+            <a href="#">Go to Home</a>
+        </div>
+    </div>
+
+    <h1 id="services" class="heading">Our Services</h1>
+    <div class="card-box grid">
+        <div class="card">
+            <h4>Plumbers</h4>
+            <img src="/Assets/Images/plumber.png" alt="">
+            <a class="btn card-btn" href="/ulogin">Hire Experts</a>
+        </div>
+        <div class="card">
+            <h4>Carpenters</h4>
+            <img src="/Assets/Images/carpenter.png" alt="">
+            <a class="btn card-btn" href="/ulogin">Hire Experts</a>
+        </div>
+        <div class="card">
+            <h4>Electrician</h4>
+            <img src="/Assets/Images/electrician.png" alt="">
+            <a class="btn card-btn" href="/ulogin">Hire Experts</a>
+        </div>
+        <div class="card">
+            <h4>Painters</h4>
+            <img src="/Assets/Images/painter.png" alt="">
+            <a class="btn card-btn" href="/ulogin">Hire Experts</a>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</html>

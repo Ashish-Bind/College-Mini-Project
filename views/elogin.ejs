@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireUp | Expert Login</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/stylelogin.css">
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script defer src="JS/login.js"></script>
+
+</head>
+
+<%- include('partials/nav') %>
+
+    <div class="wrapper">
+        <h1>Login Here</h1>
+        <p>For Experts</p>
+        <form action="#">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password" id="password">
+            <!-- <div class="recover">
+                         <a href="#">Forget Password?</a>
+                  </div> -->
+            <img id="view" src="/Assets/Icons/view.png" alt="" class="elogin">
+            <button type="submit">Login</button>
+        </form>
+        <div class="member">
+            Not a member? <a href="/esignup">Register Now</a>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</html>

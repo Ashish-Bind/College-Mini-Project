@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+:root {
+  /* Fonts Variable */
+  --comfortaa-400: "Comfortaa", cursive;
+  --montserrat-400: "Montserrat", sans-serif;
+  --playfair-400: "Playfair Display", serif;
+  --poppins-400: "Poppins", sans-serif;
+  --raleway-400: "Raleway", sans-serif;
+  --vietnam-400: "Be Vietnam Pro", sans-serif;
+
+  /* Color Variable */
+
+  --cl-gray-300: hsl(0, 0%, 27%);
+  --cl-gray-400: #777;
+  --cl-gray-500: #333;
+  --cl-primary-text-dark: #272727;
+  --cl-primary-text-light: #fff;
+
+  /* --cl-accent-200: hsl(268, 39%, 58%); */
+  --cl-accent-200: hsl(72, 62%, 77%);
+  /* --cl-accent-500: hsl(268, 29%, 48%); */
+  --cl-accent-500: hsl(72, 62%, 47%);
+  /* --cl-accent-600: hsl(268, 29%, 38%); */
+  --cl-accent-600: hsl(72, 62%, 42%);
+
+  /* Font Sizes  */
+  --fs-logo: 2rem;
+  --fs-primary-400: 1.25rem;
+  --fs-heading-700: 2.3rem;
+  --fs-heading-mobile-700: 2.3rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #444;
+  min-height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  width: 330px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  margin-top: 5%;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--cl-accent-500);
+}
+.wrapper p {
+  color: var(--cl-primary-text-dark);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+form input {
+  width: 92%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #e4e4e4;
+  color: var(--cl-primary-text-dark);
+}
+button {
+  font-size: 1rem;
+  margin-top: 1.8rem;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  width: 90%;
+  background: var(--cl-accent-500);
+}
+
+button:hover {
+  background: var(--cl-accent-600);
+}
+input:focus {
+  /* border: 1px solid hsl(0, 0%, 75%); */
+  background-color: hsl(0, 0%, 85%);
+}
+
+.term input {
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.terms label {
+  font-size: 0.7rem;
+}
+.term a {
+  color: rgb(17, 107, 143);
+  text-decoration: none;
+}
+.member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+  color: #636363;
+}
+
+.member a {
+  color: var(--cl-gray-400);
+  text-decoration: none;
+}
+.member a:hover {
+  color: var(--cl-accent-600);
+  text-decoration: underline;
+}
+.recover {
+  text-align: right;
+  font-size: 0.7rem;
+  margin: 0.3rem 1.4rem 0 0;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #464647;
+}
+.esignup {
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 298px;
+}
+.elogin {
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 190px;
+}
+.usignup {
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 298px;
+}
+.ulogin {
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 190px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin-top: 20%;
+  }
+}
