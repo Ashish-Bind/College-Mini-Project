@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/CSS/experts.css">
     <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
-    <script defer src="JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <script defer src="/JS/index.js"></script>
+    <script defer src="/JS/expertsCard.js"></script>
     <title>HireUp | Plumbers</title>
 </head>
 
@@ -17,50 +19,28 @@
     <div class="expert-wrapper">
         <h1>Plumbers</h1>
         <div class="experts-container">
-            <div class="experts-card">
-                <h3>Alok Singh</h3>
-                <img src="/Assets/Images/man.png" alt="">
-                <div class="description">
-                    Plumber
+            <% allPlumberEJS.forEach((plumber)=>{ %>
+                <div class="experts-card">
+                    <h3>
+                        <%= plumber.name %>
+                    </h3>
+                    <img src="/Assets/Images/man.png" alt="">
+                    <div class="description">
+                        <%= plumber.profession %>
+                    </div>
+                    <div class="rate">
+                        <%= plumber.rate %>/Hours
+                    </div>
+                    <div class="available"><i class="fa-solid fa-circle"></i>
+                        <span class="availiblity">
+                            <%= plumber.availablity %>
+                        </span>
+                    </div>
+                    <button class="btn">
+                        <a href="./<%= plumber.name %>">View Profile</a>
+                    </button>
                 </div>
-                <div class="rate">500/Hours</div>
-                <button class="btn">
-                    <a href="">View Profile</a>
-                </button>
-            </div>
-            <div class="experts-card">
-                <h3>Alok Singh</h3>
-                <img src="/Assets/Images/man (1).png" alt="">
-                <div class="description">
-                    Plumber
-                </div>
-                <div class="rate">500/Hours</div>
-                <button class="btn">
-                    <a href="">View Profile</a>
-                </button>
-            </div>
-            <div class="experts-card">
-                <h3>Alok Singh</h3>
-                <img src="/Assets/Images/man (2).png" alt="">
-                <div class="description">
-                    Plumber
-                </div>
-                <div class="rate">500/Hours</div>
-                <button class="btn">
-                    <a href="">View Profile</a>
-                </button>
-            </div>
-            <div class="experts-card">
-                <h3>Alok Singh</h3>
-                <img src="/Assets/Images/man.png" alt="">
-                <div class="description">
-                    Plumber
-                </div>
-                <div class="rate">500/Hours</div>
-                <button class="btn">
-                    <a href="">View Profile</a>
-                </button>
-            </div>
+                <% }) %>
         </div>
     </div>
 

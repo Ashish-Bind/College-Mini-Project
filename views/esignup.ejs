@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireUp | Expert SignUp</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/stylelogin.css">
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script defer src="JS/login.js"></script>
+
+</head>
+
+<%- include('partials/navStatic') %>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <p>For Experts</p>
+        <form action="/esignup" method="POST">
+            <input required type="text" placeholder="Name" name="expertName">
+            <input required type="email" placeholder="Email" name="expertEmail">
+            <input required type="number" placeholder="Phone Number" name="expertNumber">
+            <input title="Must contain 1 Uppercase, 1 Number, and a special Character and at least 8 or more characters"
+                type="password" pattern="[a-zA-Z0-9!-@]{8,}" placeholder="Password" id="password" required
+                maxlength="12" minlength="8" name="expertPassword">
+            <img id="view" src="Assets/Icons/view.png" alt="" class="esignup">
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="member">
+            Already a member? <a href="/elogin">Login Here</a>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+        </body>
+
+</html>

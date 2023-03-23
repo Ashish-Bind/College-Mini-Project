@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireUp | Login & SignUp</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/createProfile.css">
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <script defer src="JS/index.js"></script>
+</head>
+
+<%- include('partials/nav') %>
+    <div class="profile-container">
+        <h2>Create Profile</h2>
+        <div class="profile-img">
+            <img src="/Assets/Images/account.png" alt="">
+        </div>
+        <div class="create-profile">
+            <form action="/createprofile" method="POST">
+                <label for="name">Name :</label>
+                <input required type="text" readonly value=<%=expertNameEJS %> id="name" data-exist="true">
+                <label for="email">Email :</label>
+                <input required type="text" readonly value=<%=expertEmailEJS %> id="email" data-exist="true">
+                <label for="number">Mobile :</label>
+                <input required type="text" readonly value=<%=expertMobileEJS %> id="number" data-exist="true">
+
+                <label for="available">Are you Available to work:</label>
+                <select name="availablity" id="available">
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+
+                <label for="profession">Profession :</label>
+                <select name="profession" id="profession">
+                    <option value="Plumber">Plumber</option>
+                    <option value="Carpenter">Carpenter</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Painter">Painter</option>
+                </select>
+
+
+                <label for="pincode">Pincode :</label>
+                <input required type="text" id="pincode" name="pincode">
+
+                <label for="description">Enter about your Work:</label>
+                <textarea name="workDetails" id="description" cols="30" rows="4"></textarea>
+
+                <label for="rate">Rate:</label>
+                <input required type="text" id="rate" name="rate">
+
+                <button class="btn submit-btn" type="submit">Save Profile</button>
+            </form>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer') %>
+
+</html>

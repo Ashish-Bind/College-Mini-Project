@@ -13,24 +13,7 @@
     <script defer src="JS/index.js"></script>
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo-name">
-            Hire<span>Up</span>
-        </div>
-        <div class="hamburger">
-            <img class="icon h-icon" src="Assets/Icons/square.png" alt="">
-        </div>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="">
-                    <%= userNameEJS %>
-                </a></li>
-            <!-- <li><img class="icon mode" src="Assets/Icons/light-mode.png" alt=""></li> -->
-        </ul>
-    </nav>
+<%- include('partials/nav') %>
 
     <div class="section grid">
         <div class="container">
@@ -50,22 +33,22 @@
         <div class="card">
             <h4>Plumbers</h4>
             <img src="/Assets/Images/plumber.png" alt="">
-            <a class="btn card-btn" href="/plumber">Hire Experts</a>
+            <a class="btn card-btn" href="/home/plumber">Hire Experts</a>
         </div>
         <div class="card">
             <h4>Carpenters</h4>
             <img src="/Assets/Images/carpenter.png" alt="">
-            <a class="btn card-btn" href="/carpenter">Hire Experts</a>
+            <a class="btn card-btn" href="/home/carpenter">Hire Experts</a>
         </div>
         <div class="card">
             <h4>Electrician</h4>
             <img src="/Assets/Images/electrician.png" alt="">
-            <a class="btn card-btn" href="/electrician">Hire Experts</a>
+            <a class="btn card-btn" href="/home/electrician">Hire Experts</a>
         </div>
         <div class="card">
             <h4>Painter</h4>
             <img src="/Assets/Images/painter.png" alt="">
-            <a class="btn card-btn" href="/painters">Hire Experts</a>
+            <a class="btn card-btn" href="/home/painters">Hire Experts</a>
         </div>
     </div>
 

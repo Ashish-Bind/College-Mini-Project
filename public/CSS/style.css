@@ -40,7 +40,6 @@
 }
 
 .btn {
-  font-family: var(--comfortaa-400);
   font-size: var(--fs-primary-400);
   outline: none;
   border: none;
@@ -86,7 +85,6 @@
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 /*
@@ -305,7 +303,7 @@ h6 {
   }
   .logo-content {
     width: 400px;
-    text-align: center;
+    text-align: center !important;
     margin-inline: auto;
   }
   .content {
