@@ -299,6 +299,25 @@ app.get('/home/painter', (req, res) => {
     res.render('painter', { userNameEJS: userName })
 })
 
+app.get('/home/:name', async (req, res) => {
+    const plumber = await expertModel.findOne({ name: req.params.name });
+    res.render('profile', {
+        userNameEJS: userName,
+        nameEJS: plumber.name,
+        emailEJS: plumber.email,
+        mobileEJS: plumber.mobileNo,
+        pinEJS: plumber.pincode,
+        availableEJS: plumber.availablity,
+        professionEJS: plumber.profession,
+        descriptionEJS: plumber.profileDescription,
+        rateEJS: plumber.rate
+    });
+})
+
+app.get('/home/profile/logout', (req, res) => {
+    res.render('expertInfo');
+})
+
 // Listening On Port 80
 app.listen(80, (req, res) => {
     console.log('Server started on Port 80');

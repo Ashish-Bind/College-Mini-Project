@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HireUp | Login & SignUp</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="/CSS/profile.css">
     <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
-    <script src="/JS/profile.js" defer></script>
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <script defer src="/JS/index.js"></script>
 </head>
 
 <%- include('partials/nav') %>
@@ -62,5 +64,24 @@
         </div>
     </div>
     <%- include('partials/footer') %>
+        <script type="text/javascript">
+            const hireButton = document.querySelector('.hire-btn');
+            const expertEmailId = '<%= emailEJS %>';
+            let isHired = false;
+
+            if (!isHired) {
+                hireButton.addEventListener('click', () => {
+                    window.location = `mailto:${expertEmailId}`
+
+                    hireButton.classList.toggle('active');
+                    if (hireButton.textContent === "Hire Expert") {
+                        hireButton.textContent = 'Cancel'
+                        isHired = true;
+                    } else {
+                        hireButton.textContent = 'Hire Expert'
+                    }
+                })
+            }
+        </script>
 
 </html>
