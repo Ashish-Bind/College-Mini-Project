@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireUp | Edit Profile</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/editProfile.css">
+    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <script defer src="JS/index.js"></script>
+</head>
+
+<%- include('partials/nav') %>
+    <div class="profile-container">
+        <h2>Edit Profile</h2>
+        <div class="profile-img">
+            <img src="/Assets/Images/account.png" alt="">
+        </div>
+        <div class="create-profile">
+            <form action="/editprofile" method="POST">
+                <label for="name">Name :</label>
+                <input required type="text" readonly value= <%= expertNameEJS %> id="name"/>
+                <label for="email">Email :</label>
+                <input required type="text" readonly value= <%= expertEmailEJS %> id="email"/>
+                <label for="number">Mobile :</label>
+                <input required type="text" readonly value= <%= expertMobileEJS %> id="number"/>
+
+                <label for="available">Change availablity:</label>
+                <select name="availablity" id="available">
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+                <button class="btn submit-btn" type="submit">Save Profile</button>
+            </form>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer') %>
+
+</html>

@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/style.css" />
-    <link rel="stylesheet" href="/CSS/experts.css">
-    <link rel="shortcut icon" href="/Assets/Images/HireUp_favicon.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/d536f61fb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/experts.css" />
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/HireUp_favicon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/d536f61fb2.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="/JS/index.js"></script>
     <script defer src="/JS/expertsCard.js"></script>
     <title>HireUp | Plumbers</title>
-</head>
+  </head>
 
-<%- include('partials/nav') %>
-    <div class="expert-wrapper">
-        <h1>Plumbers</h1>
-        <div class="experts-container">
-            <% allPlumberEJS.forEach((plumber)=>{ %>
-                <div class="experts-card">
-                    <h3>
-                        <%= plumber.name %>
-                    </h3>
-                    <img src="/Assets/Images/man.png" alt="">
-                    <div class="description">
-                        <%= plumber.profession %>
-                    </div>
-                    <div class="rate">
-                        <%= plumber.rate %>/Hours
-                    </div>
-                    <div class="available">
-                        <span class="availiblity">
-                            <%= plumber.availablity %>
-                        </span>
-                    </div>
-                    <button class="btn">
-                        <a href="./<%= plumber.name %>">View Profile</a>
-                    </button>
-                </div>
-                <% }) %>
+  <%- include('partials/nav') %>
+  <div class="expert-wrapper">
+    <h1>Plumbers</h1>
+    <div class="experts-container">
+      <% allPlumberEJS.forEach((plumber)=>{ %>
+      <div class="experts-card">
+        <h3><%= plumber.name %></h3>
+        <img src="/Assets/Icons/profile.jpg" alt="" />
+        <div class="description"><%= plumber.profession %></div>
+        <div class="rate"><%= plumber.rate %>/Hours</div>
+        <div class="available">
+          <span class="availiblity"> <%= plumber.availablity %> </span>
         </div>
+        <button class="btn">
+          <a href="./<%= plumber.name %>">View Profile</a>
+        </button>
+      </div>
+      <% }) %>
     </div>
+  </div>
 
-    <%- include('partials/footer') %>
-
-
+  <%- include('partials/footer') %>
 </html>

@@ -149,7 +149,6 @@ h6 {
 
 .profile-container {
   width: 60%;
-  height: 80vh;
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
@@ -157,36 +156,36 @@ h6 {
   box-shadow: -2px 13px 30px 0px rgba(0, 0, 0, 0.18);
   border-radius: 1rem;
   text-align: center;
-  padding: 2rem;
-  font-size: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
-.profile-container p {
-  width: 60%;
-  color: hsl(0, 40%, 10%) !important;
-  margin: 5px auto;
+.create-profile form {
+  display: flex;
+  flex-direction: column;
 }
-.profile-container p > span {
+
+.create-profile form input[data-exist='true'] {
   color: hsl(0, 0%, 65%);
-  font-weight: 600;
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: 2px solid hsl(0, 0%, 0%);
   margin: 0 auto;
   border-radius: 50%;
 }
-
-.active {
-  background-color: hsl(0, 100%, 40%);
+.submit-btn {
+  width: max-content;
+  margin: 1rem auto;
 }
 
-.active:hover {
-  background-color: hsl(0, 100%, 38%);
-}
-
-i {
-  font-size: 1.1rem;
+input,
+h2,
+textarea,
+select,
+option,
+label {
+  color: #272727 !important;
 }

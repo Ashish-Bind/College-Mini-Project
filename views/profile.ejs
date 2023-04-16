@@ -42,6 +42,7 @@
             </div>
             <div class="profile-availablity">
                 <p><span>Is available:</span>
+                    <i class="fa-solid fa-circle"></i>
                     <%= availableEJS %>
                 </p>
             </div>
@@ -81,6 +82,13 @@
                         hireButton.textContent = 'Hire Expert'
                     }
                 })
+            }
+
+            const circle = document.querySelector('.fa-circle');
+            if ('<%- availableEJS %>' === 'Available') {
+                circle.style.color = 'lightgreen';
+            } else if ('<%- availableEJS %>' === 'Not Available') {
+                circle.style.color = 'red';
             }
         </script>
 
